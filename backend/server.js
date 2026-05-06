@@ -30,6 +30,10 @@ function needlemanWunsch(seq1, seq2, match = 1, mismatch = -1, gap = -2) {
   };
 }
 
+app.get('/', (req, res) => {
+  res.send('Needleman-Wunsch API is running 🚀');
+});
+
 app.post('/align', (req, res) => {
   const { seq1, seq2 } = req.body;
 
